@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+body { 
+    /* margin: 4rem;  */
+    /* background-image: linear-gradient(to right top, #81c4c1, #e1a5e6, #f1dac9, #ea5774, #aaaae3); */
+} 
+#formContainer { 
+    margin-bottom: 20px; 
+} 
+
+label { 
+    display: block; 
+    margin-top: 10px; 
+}
+input, 
+textarea { 
+    width: 300px; 
+    padding: 8px; 
+    margin-top: 5px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+} 
+
+
+button { 
+    margin: 10px; 
+    padding: 8px 16px; 
+    background-color: #4CAF50; 
+    color: #fff; 
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+} 
+button:hover { 
+    background-color: #45a049; 
+} 
+table { 
+    border-collapse: collapse; 
+    margin-bottom: 20px; 
+    width: 100%; 
+} 
+
+.formContainer1{
+    margin-left: 70px;
+}
+.formContainer1 h1{
+    /* font-family: 'Source Code Pro', monospace; */
+    text-align: center;
+    -webkit-text-stroke: 1px black;  
+     color:red
+}
+th, 
+td { 
+    border: 1px solid #ddd; 
+    padding: 8px; 
+    text-align: left; 
+
+} 
+th { 
+    background-color: #4CAF50; 
+    color: #fff; 
+} 
+
+body{
+    
+    /* background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12); */
+}
+
+.contactform h1{
+    font-family: 'Source Code Pro', monospace;
+    text-align: center;
+}
+
+@media (max-width: 600px){
+   
+    .body-in{
+        /* position: absolute; */
+        
+    }
+    .Adding-contackt{
+        display: block;
+        /* transform: translate(-30px , 0px); */
+        /* position: absolute; */
+    }
+}
+
+.Adding-contackt{
+    padding: 50px;
+    margin-top: 40px;
+    margin-left: 20px;
+}

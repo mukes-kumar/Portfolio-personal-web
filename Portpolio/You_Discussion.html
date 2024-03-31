@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    
+<style> 
+ 
+
+    label { 
+        display: block; 
+        margin-top: 10px; 
+    }
+    input, 
+    textarea { 
+        width: 300px; 
+        padding: 8px; 
+        margin-top: 5px; 
+        border: 1px solid #ccc; 
+        border-radius: 4px; 
+    } 
+    button { 
+        margin: 10px; 
+        padding: 8px 16px; 
+        background-color: #4CAF50; 
+        color: #fff; 
+        border: none; 
+        border-radius: 4px; 
+        cursor: pointer; 
+    } 
+    button:hover { 
+        background-color: #45a049; 
+    } 
+    table { 
+        border-collapse: collapse; 
+        margin-bottom: 20px; 
+        width: 100%; 
+    } 
+    .intro1{
+        margin-left: 5px;
+        margin-top: 50px;
+    }
+    th, 
+    td { 
+        border: 1px solid #ddd; 
+        padding: 8px; 
+        text-align: center; 
+
+    } 
+    th { 
+        background-color: #4CAF50; 
+        color: #fff; 
+    } 
+</style> 
+</head>
+<body>
+  <header>
+    <nav class="nav_bar">
+        <div class="nav-logo border">
+            <div class="logo">Portfolio</div>
+        </div>
+        <div class="nav-address border">
+            <p class="add-first">Developer</p>
+            <div class="signin">
+                <a href="intro.html">
+                    <p class="add-sec">Intro</p></a>
+            </div>
+        </div>
+    </div>
+    <div class="nav-singin border" >
+        <div class="signin">
+            <a href="sign_in.html">
+                <p><span>Only User , Sing in</span></p>
+                <p class="nav-second">Account</p>
+            </a>
+        </div>
+    </div>
+    <div class="nav-return border">
+        <div class="signin">
+            <a href="Mukesh.pdf" target="_blank">
+                <p><span>Download</span></p>
+                <p class="nav-second">Resume</p>
+            </a>
+        </div>
+    </div>
+    <!-- <div class="nav-cart">
+        <div class="signin">
+            <a href="contact.html" target="_parent">
+                <p><span>Enquiry</span></p>
+                <p class="nav-second">Details</p>
+            </a>
+        </div>            
+    </div>       -->
+    </nav>
+    <div class="panel">
+        <div class="panel-all">
+           <a class="link" > <i class="fa-solid fa-bars"> </i> All</a>               
+        </div>
+        <div class="panel-ops">
+            <!-- <p class="link" >Home</p> -->
+            <a href="intro.html" class="link" target="_parent">My Intro</a>
+            <a href="https://github.com/mukes-kumar" class="link" target="_parent">GitHub</a>
+            <a href="project.html" class="link" target="_parent">Project</a>
+            <!-- <a href="https://www.w3schools.com/" class="link" target="_parent">Study</a> -->
+            <a href="contact.html" class="link" target="_parent">Contact</a>
+        </div>
+        <!-- <div class="panel-deal">
+              Any Enquiry for Development
+        </div> -->
+    </div>
+</header>
+<!-- <div class="container"> -->
+    <div class="sidebar sidebarGo"> 
+    <nav>
+        <ul>
+            <li><a href="index.html">Home </a></li>
+            <li><a href="intro.html">My Intro </a></li>
+            <li><a href="project.html">Project </a></li>
+            <li><a href="You_Discussion.html">Discussion </a></li>
+            <li><a href="contact.html">Contact </a></li>
+        </ul>
+    </nav>
+   </div>
+       <div class="main">
+        <div class="hamburger">
+            <img src="ham.png" alt="" class="ham" width="23px">
+            <img src="cross-sign.png" alt="cross" class="cross" width="23px">
+        </div>
+    </div>
+
+    <div class="intro1">
+
+      <form action="" id="loginForm" onsubmit="addData()">
+        <h3 style="font-family: 'Source Code Pro', monospace;
+
+        margin-top:20px">If you want to add the project then
+         you add the project for discussion.</h3>
+                <div class="listDiv">
+                       <label for="nameInput"> 
+                           Project Name: 
+                       </label> 
+                       <input type="text" 
+                              id="nameInput" 
+                              placeholder="Project"> 
+                       <label for="emailInput"> 
+                           Technologies Use: 
+                       </label> 
+                       <input type="text" 
+                              id="emailInput" 
+                              placeholder="Technologies"> 
+                       <label for="numberInput"> 
+                           Project Functionality: 
+                       </label> 
+                       <input type="text" 
+                              id="numberInput" 
+                              placeholder="Funtionality"> 
+                       <label for="addressInput"> 
+                           Descriptions: 
+                       </label> 
+                       <textarea id="addressInput" 
+                                 placeholder="Descriptions"> 
+                       </textarea> 
+                       <div id="form-check">
+                           <button type="submit"> 
+                               Add 
+                           </button> 
+                         </div>
+                     
+                   </div>
+      </form>
+     
+                   <table id="outputTable"> 
+                       <tr> 
+                           <th>Title</th> 
+                           <th>Technologies</th> 
+                           <th>Functionality</th>
+                           <th>Descriptions</th> 
+                           <th>Action</th> 
+                       </tr> 
+                   </table> 
+
+            </div>
+        
+        
+
+
+    <script> 
+
+        let loginForm = document.getElementById("loginForm");
+
+        loginForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+        
+          let name = document.getElementById("nameInput");
+          let email = document.getElementById("emailInput");
+          let mobile = document.getElementById("numberInput");
+
+          let address = document.getElementById("addressInput");
+        
+          if (name.value == "" || email.value=="" || mobile.value == "" || address.value=="") {
+            alert("Ensure you input a value in both fields!");
+          } else {
+            // perform operation with form input
+           // alert("This form has been successfully submitted!");
+            function addData() { 
+                // Get input values 
+    
+              
+    
+                // Get the table and insert a new row at the end 
+    
+                let table = document.getElementById("outputTable"); 
+                let newRow = table.insertRow(table.rows.length); 
+                // Insert data into cells of the new row 
+    
+                newRow.insertCell(0).innerHTML = name; 
+                newRow.insertCell(1).innerHTML = email; 
+                newRow.insertCell(2).innerHTML = mobile; 
+                newRow.insertCell(3).innerHTML = address; 
+                newRow.insertCell(4).innerHTML = 
+                    '<button onclick="editData(this)">Edit</button>'+ 
+                    '<button onclick="deleteData(this)">Delete</button>'; 
+                // Clear input fields 
+    
+                clearInputs(); 
+            } 
+    
+            function editData(button) { 
+                // Get the parent row of the clicked button 
+    
+                let row = button.parentNode.parentNode; 
+                // Get the cells within the row 
+    
+                let nameCell = row.cells[0]; 
+                let emailCell = row.cells[1]; 
+                let mobileCell = row.cells[2]; 
+                let addressCell = row.cells[3]; 
+                // Prompt the user to enter updated values 
+    
+                let nameInput = 
+    
+                    prompt("Enter the updated name:", 
+                        nameCell.innerHTML); 
+                let emailInput = 
+                    prompt("Enter the updated email:", 
+                        emailCell.innerHTML); 
+                let numberInput = 
+                    prompt("Enter the updated mobile details:", 
+                        mobileCell.innerHTML 
+                    ); 
+                let addressInput = 
+    
+                    prompt("Enter the updated address:", 
+                        addressCell.innerHTML 
+                    ); 
+                // Update the cell contents with the new values 
+    
+                nameCell.innerHTML = nameInput; 
+                emailCell.innerHTML = emailInput;
+                mobileCell.innerHTML = numberInput; 
+                addressCell.innerHTML = addressInput; 
+            } 
+            function deleteData(button) { 
+                // Get the parent row of the clicked button 
+    
+                let row = button.parentNode.parentNode; 
+                // Remove the row from the table 
+    
+                row.parentNode.removeChild(row); 
+            } 
+            function clearInputs() { 
+                // Clear input fields 
+    
+                document.getElementById("nameInput").value = ""; 
+                document.getElementById("emailInput").value = ""; 
+                document.getElementById("numberInput").value = ""; 
+                document.getElementById("addressInput").value = ""; 
+            } 
+            alert("This form has been successfully submitted!");
+
+            username.value = "";
+            password.value = "";
+          }
+        });
+        
+    </script> 
+ 
+    <script src="script.js"></script>
+
+</body>
+</html>
